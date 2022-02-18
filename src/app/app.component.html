@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section class="header">
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="#">Demo</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" routerLink="home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="row">
+        <span class="text cols-md-6">I am Looking for</span>
+        <div class="box col-md-6">
+          <input type="text" class="form-control">
+          <span class="input-group-btn btn">
+            <button class="btn btn-search" type="button"><i class="fa fa-search fa-fw"></i> Search</button>
+          </span>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox">Full Time
+          <input type="checkbox">Part Time/Freelance
+        </div>
+          <div class="drpbox">
+            <select class="form-select">
+              <option selected></option>
+              <option value="1">Pune</option>
+              <option value="2">Mumbai</option>
+              <option value="3">Banglore</option>
+            </select>
+          </div>
+          <div>
+            <!-- Button trigger modal -->
+              
+              
+              <button class="btn btn-danger regstbtn" (click)="triggerModal(modalData)">Register</button>
+
+              <ng-template #modalData let-modal>
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title">User Registration</h4>
+                  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <input type="text" placeholder="Enter your Name" class="form-control"><br>
+                    <input type="number" placeholder="Enter your Number" class="form-control"><br>
+                    <input type="Email" placeholder="Enter your Email" class="form-control"><br>
+                    Age<input type="range" id="Age" class="slider" min="0" max="100" value="0"> 0<br>
+                    <input type="text" class="form-control" placeholder="Country"><br>
+                    <input type="text" class="form-control"  placeholder="State"><br>
+                    <input type="text" class="form-control" placeholder="Address"><br>
+                    <input type="file">
+                  </form>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary subtn" (click)="modal.close('Save click')">Submit</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger clsbtn" (click)="modal.close('Save click')">Close</button>
+                  </div>
+                </div>
+                
+              </ng-template>
+             
+          </div>
+      </div>
+  </section>
+  <section class="body">
+    <div>
+      <span class="text1">We're leaders in</span>
+    </div>
+    <br>
+    <div>
+      <span class="text2">Creative Digital Recruitment</span>
+    </div>
+    <br>
+    <div>
+      <span class="text1">Based in Surry Hills, the creative hub of Sydney we are surrounded by creativity<br> and that reflects on the type of jobs we recruit for</span>
+    </div>
+    <div>
+      <button class="btn3">FIND OUT MORE US!</button>
+    </div>
+    </section>
+    <section class="mailling">
+      <span class="text4">Suscribe to our Job Seeker Mailling List</span>
+      <div class="inputWithIcon">
+        <input type="text" placeholder="Email">
+        <i class="fa fa-envelope fa-lg fa-fw icon" aria-hidden="true"></i>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="">
+        <span><i class="fa fa-envelope-o"></i><input type="text"></span><br>
+        <span>Copyright @ 2014 Two Bytes Consuring Terms & Politics</span>
+        <span class="footerbtn">
+          <button >Twit</button>
+          <button>692</button>
+          <button>Like</button>
+          <button>117</button>
+        </span>
+      </div>
+      </section>
+      <script>
+        const slider = document.getElementById("Age");
+        const slider = document.querySelector(".value");
+        value.textContent = slider.value;
+        slider.oninput = function(){
+          value.textContent = this.value;
+        }
+      </script>
+</body>
+</html>
+<router-outlet></router-outlet>
